@@ -11,6 +11,7 @@ public class Medicine {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long medId;
+
     String medName;
     float medPrice;
     int medQty;

@@ -16,7 +16,7 @@ public class OrderController {
 
     //api for starting a new order
     @PostMapping("/{customerId}")
-    public String addOrder(@PathVariable long customerId){
+    public Object addOrder(@PathVariable long customerId){
         return orderService.addOrder(customerId);
     }
 

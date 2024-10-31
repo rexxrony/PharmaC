@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,6 +17,8 @@ public class Order {
     @ManyToOne
     @JoinColumn(name = "customerId", nullable = false)
     Customer customer;
+
+    List<OrderItem> orderItemList;
 
     LocalDate orderDate;
     float totalAmount;

@@ -20,24 +20,27 @@ public class OrderService {
     private CustomerRepository customerRepository;
 
 
-    public String addOrder(long customerId) {
+    public Object addOrder(long customerId) {
         Optional<Customer> customer =customerRepository.findById(customerId);
         if(customer.isPresent()){
             Order order = new Order();
             order.setOrderDate(LocalDate.now());
             order.setCustomer(customer.get());
-            orderRepository.save(order);
+            Order placedOrder = orderRepository.save(order);
+
+            return placedOrder;
         }
         else {
             return "Customer not found";
         }
-
-        return "Order Placed Successfully!";
     }
 
 
     public List<Order> getOrders() {
+
         return orderRepository.findAll();
+
+
     }
 
 

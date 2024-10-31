@@ -11,13 +11,16 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "orderId", nullable = false)
-    Order order;
+//    @ManyToOne
+//    @JoinColumn(name = "orderId", nullable = false)
+//    Order order;
 
-    @ManyToOne
-    @JoinColumn(name = "medId", nullable = false)
-    Medicine medicine;
+    Long orderId; //reciept no
+
+//    @ManyToOne
+//    @JoinColumn(name = "medId", nullable = false)
+
+    Long medicineId;
 
     int qtyOrderItem;
     float priceOfItem;

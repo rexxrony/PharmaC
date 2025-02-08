@@ -15,6 +15,7 @@ public class Medicine {
     String medName;
     float medPrice;
     int medQty;
+    //int med
     String medLocation;
 
 }

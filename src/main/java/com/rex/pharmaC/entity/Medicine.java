@@ -16,6 +16,7 @@ public class Medicine {
     float medPrice;
     int medQty;
     //int med
+    //int med2
     String medLocation;
 
 }
